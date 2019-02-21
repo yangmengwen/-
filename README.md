@@ -48,24 +48,26 @@ window.onload = function (){
   }
   xmlhttp.open('GET','a.php',true);
   xmlhttp.send();
+```
 ## 浏览器渲染
 1. 浏览器根据HTML生成Dom树
 2. 生成css规则树
 3. Dom树和css规则树共同生成渲染树
 4. 根据渲染树计算节点渲染页面
+
 ## js去除空格
 ```
-一、使用正则方法
-  > 1.去除首尾空格： str= str.replace('/\^s*|\s*$/g','')
-  > 2.去除所有空格： str= str.replace('/\^s*/g','')
-二、.trim()方法
-  > 无法去除中间的空格，trimLeft()和trimRight()分别去除左右的空格
-三、$.trim()方法
+  一、使用正则方法
+     1. 去除首尾空格： str= str.replace('/\^s*|\s*$/g','')
+     2. 去除所有空格： str= str.replace('/\^s*/g','')
+  二、.trim()方法
+    1. 无法去除中间的空格，trimLeft()和trimRight()分别去除左右的空格
+  三、$.trim()方法
 ```
 ## 获取链接上的参数
 ```
-function queryString(str){
-  return (document.location.search.match(new RegExp("(?:^\\?|&)"+key+"=(.*?)(?=&|$)"))||['',null])[1];
-}
+  function queryString(str){
+    return (document.location.search.match(new RegExp("(?:^\\?|&)"+key+"=(.*?)(?=&|$)"))||['',null])[1];
+  }
 ```
 
